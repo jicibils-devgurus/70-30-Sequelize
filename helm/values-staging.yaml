@@ -1,0 +1,16 @@
+nameOverride: "admin"
+backendService: true
+
+istio:
+  enabled: false
+
+container:
+  host: 0.0.0.0 # We don't have a service mesh yet, so let's expose it for testing purposes
+  port: 4444
+
+service:
+  port: 4444
+
+ingress:
+  azure:
+    enabled: true # only recommended for dev/testing purposes https://docs.microsoft.com/en-us/azure/aks/http-application-routing

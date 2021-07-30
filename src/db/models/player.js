@@ -5,6 +5,11 @@ module.exports = (sequelize, DataTypes) => {
 
   Player.init(
     {
+      id: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        primaryKey: true
+      },
       name: {
         type: DataTypes.STRING,
         allowNull: false
